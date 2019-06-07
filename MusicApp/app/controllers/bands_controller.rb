@@ -1,5 +1,5 @@
 class BandsController < ApplicationController
-    before_action :require_user! #ensures only user can view bands 
+    before_action :require_user! 
 
     def index
         @bands = Band.all

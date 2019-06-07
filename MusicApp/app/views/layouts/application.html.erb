@@ -9,17 +9,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<header>
+<header
   <h1> MUSIC APP</h1>
 </header>
 
 <br>
 
   <body>
+  <body style= "background-color:powderblue;">
 
   <% if logged_in? %>
-    <h2>Welcome!
-    <%= current_user.email %>
+    <h2>Welcome
+    <%= current_user.email %>!
     </h2>
 
     <form action= "<%= session_url %>" method = "POST" >
@@ -35,5 +36,6 @@
 
 
     <%= yield %>
+  </body>
   </body>
 </html>
